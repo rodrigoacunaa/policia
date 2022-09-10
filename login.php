@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title></title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/imagenes/alto somos la polisia2.jpg" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg" style="background-color: darkblue;" >
+            <div class="container px-4 px-lg-5">
+                <img src="assets/imagenes/alto somos la polisia.jpg" width="30" height="30" class="mr-2 mb-1" alt="" id="logo"><b style="color : white; padding-left:15px;">Escuela de policia "juan Vucetich"</b>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        
+                            </ul>
+                        </li>
+                    </ul>
+                    <button><a href="../policia/index.html">🔙</a></button>
+                    <form class="d-flex">
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div style="padding:30px">
+        <div class="container bg-white p-2 needs-validation registro" style="border: 1px solid #d0d0d0; max-width: 500px; height: 360px; padding-top: 10px;" novalidate>
+            <h4 class="text-center my-4">Iniciar Sesión</h4>
+            <form method="POST" action="#" class="mx-2">
+                <div class="form-group">
+                    <label for="loginEmail">Correo Electronico</label>
+                    <input type="email" name="Email_login" class="form-control" id="loginEmail" aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPass">Contraseña</label>
+                    <input type="password" name="Contraseña_login" class="form-control" id="loginPass" required>
+                </div>
+                <br>
+                <a class="btn btn-primary" style="cursor: pointer;" href="http://localhost/policia/admin.php">Ingresar</a>
+                <a class="btn btn-primary" style="cursor: pointer;" href="http://localhost/policia">Volver al inicio</a>
+            </form>
+        </div>
+        </div>
+        <footer class="py-5 bg-dark" style="padding: top 5px;">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
