@@ -34,17 +34,17 @@
         <div style="padding:30px">
         <div class="container bg-white p-2 needs-validation registro" style="border: 1px solid #d0d0d0; max-width: 500px; height: 360px; padding-top: 10px;" novalidate>
             <h4 class="text-center my-4">Iniciar Sesión</h4>
-            <form method="POST" action="#" class="mx-2">
+            <form method="POST" action="modulos/loginMod.php" class="mx-2">
                 <div class="form-group">
                     <label for="loginEmail">Correo Electronico</label>
-                    <input type="email" name="Email_login" class="form-control" id="loginEmail" aria-describedby="emailHelp" required>
+                    <input type="email" name="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" required>
                 </div>
                 <div class="form-group">
                     <label for="loginPass">Contraseña</label>
-                    <input type="password" name="Contraseña_login" class="form-control" id="loginPass" required>
+                    <input type="password" name="password" class="form-control" id="loginPass" required>
                 </div>
                 <br>
-                <a class="btn btn-primary" style="cursor: pointer;" href="http://localhost/policia/admin.php">Ingresar</a>
+                <button type="submit" name="submit" class="btn btn-primary" style="cursor: pointer;">Ingresar</button>
                 <a class="btn btn-primary" style="cursor: pointer;" href="http://localhost/policia">Volver al inicio</a>
             </form>
         </div>

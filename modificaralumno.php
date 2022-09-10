@@ -1,3 +1,8 @@
+<?php
+include("modulos/db.php");
+include("modulos/funciones.php");
+destroyAdmin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

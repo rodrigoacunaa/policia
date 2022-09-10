@@ -1,9 +1,7 @@
 <?php
-
-    include('conectando.php');
-
-$query = mysqli_query($connection, "SELECT dni,Nombre FROM alumnos WHERE 1");
-
+include("modulos/db.php");
+include("modulos/funciones.php");
+destroyAdmin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
