@@ -1,8 +1,10 @@
 <?php
-include("modulos/db.php");
+include("modulos/loginMod.php");
 include("modulos/funciones.php");
+$email = $_SESSION['email'];
 destroyAdmin();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,10 +32,10 @@ destroyAdmin();
                         </li>
                     </ul>
          <div>
-           <form action="admin.php ">
-            <button class="btn btn-dark" type="submit"><i class="bi bi-arrow-90deg-left"></i>
+            <form action="modulos/logout.php" method="post"> 
+            <button class="btn btn-dark" type="submit" name="logout"><i class="bi bi-arrow-90deg-left"></i>
             </button>
-             </form>
+        </form>
            </div>
              <!--!logout -->
                     </form>
@@ -47,72 +49,67 @@ destroyAdmin();
         <!-- Body -->
         <div class="container pb-2 bg-white card-shadow">
           <!--formulario de registro -->
-            <form action="../modules/regModPat.php" method="post">
+            <form id="cargarAlumno">
                 <div class="form-row pt-2">
                   <div class="col-md-6 mb-3">
-                    <label for="validationCustom01">Nombre</label>
-                    <input type="text" class="form-control" id="validationCustom01" name="nombre" required>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCustom02">Apellido</label>
-                    <input type="text" class="form-control" id="validationCustom02" name="apellido" required>
+                    <label for="validationCustom01">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="nomApe" name="nombre" required>
                   </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                       <label for="inputMail">Correo Electronico</label>
-                      <input type="email" class="form-control" id="inputMail" aria-describedby="emailHelp" name="email" required>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="inputTel">Telefono</label>
-                        <input type="text" class="form-control" id="inputTel" name="telefono" required>
+                        <input type="number" class="form-control" id="telefono" name="telefono" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">DNI</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="ent_soc" required>
+                        <input type="number" class="form-control" id="dni" name="ent_soc" required>
                     </div>
 
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Codigo Postal</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="number" class="form-control" id="cod_post" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Distrito</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="distrito" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Domicilio</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="domicilio" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Destino</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="destino" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Comisaria del domicilio</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="com_destino" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Secundario</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="secundario" name="dni" required>
                     </div> 
                     <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">pais de nacimiento</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <label for="validationCustom03">Pais de nacimiento</label>
+                        <input type="text" class="form-control" id="paisNacimiento" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Aula</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="number" class="form-control" id="aula" name="dni" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Arma asignada</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="arma" name="dni" required>
                     </div>
                 <br>
-                <a class="btn btn-primary" style="cursor: pointer;" href="#">Agregar</a>
-                <a class="btn btn-dark" style="cursor: pointer;" href="#">Modificar alumno</a>
+                <button class="btn btn-primary" type="submit" id="submitA" style="cursor: pointer;">Agregar</button>
                 <a class="btn btn-secondary" style="cursor: pointer;" href="admin.php">Volver al inicio</a>
             </form>
         </div>
@@ -125,6 +122,50 @@ destroyAdmin();
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+             $(document).on('click', '#submitA',function () {
+
+            $('#cargarAlumno').submit(e => {
+                    e.preventDefault();
+                    //creacion de objeto de almacenamiento de los inputs "postData"
+                    const postData = {
+                    //guardamos los input dentro de un objeto
+                    nomApe: $("#nomApe").val(),
+                    email: $("#email").val(),
+                    telefono: $("#telefono").val(),
+                    dni: $("#dni").val(),
+                    cod_post: $("#cod_post").val(),
+                    distrito: $("#distrito").val(),
+                    domicilio: $("#domicilio").val(),
+                    destino: $("#destino").val(),
+                    com_destino: $("#com_destino").val(),
+                    secundario: $("#secundario").val(),
+                    paisNacimiento: $("#paisNacimiento").val(),
+                    aula: $("#aula").val(),
+                    arma: $("#arma").val(),
+                    tipo: "cargarAlumno"
+                    };
+                    //validacion ternaria de redireccion segun valor de la variable booleana "edit"
+                    const url = "modulos/consultas.php";
+                    //mostramos por pantalla el objeto y la direccion donde sera enviada para ser procesado
+                    console.log(postData, url);
+                    //metodo post por jquery parametros = (direccion url del archivo php, el objeto que guarda los datos a procesar, una funcion de respuesta al
+                    //procesamiento de dichos datos)
+                    $.post(url, postData, (response) => {
+
+                        const rta = JSON.parse(response);
+                        console.log(rta);
+                        if(rta == 1){
+                        alert("datos cargados");
+                        $("#cargarAlumno").trigger('reset');
+                    }
+
+                    });
+                });
+        });
+        </script>
 
 </body>
 </html>

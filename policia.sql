@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-09-2022 a las 20:27:50
+-- Tiempo de generación: 11-09-2022 a las 08:08:40
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -28,20 +28,37 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `alumnos` (
-  `dni` varchar(11) NOT NULL,
-  `nomApe` varchar(50) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `dni` int(20) NOT NULL,
+  `nomApe` text NOT NULL,
+  `email` varchar(150) NOT NULL,
   `telefono` varchar(12) NOT NULL,
   `cdPostal` int(4) NOT NULL,
-  `distrito` varchar(100) NOT NULL,
-  `domicilio` varchar(100) NOT NULL,
-  `destino` text NOT NULL,
-  `comisariaD` varchar(100) NOT NULL,
-  `secundario` tinyint(1) NOT NULL,
+  `distrito` varchar(150) NOT NULL,
+  `domicilio` varchar(150) NOT NULL,
+  `destino` varchar(150) NOT NULL,
+  `comisariaD` varchar(150) NOT NULL,
+  `secundario` text NOT NULL,
   `paisNacimiento` text NOT NULL,
-  `aula` int(3) NOT NULL,
+  `aula` varchar(3) NOT NULL,
   `armaAsig` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `alumnos`
+--
+
+INSERT INTO `alumnos` (`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distrito`, `domicilio`, `destino`, `comisariaD`, `secundario`, `paisNacimiento`, `aula`, `armaAsig`) VALUES
+(4545, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 5432, 'sadsad', 'dasdsa', 'dasda', 'dsadsa', 'dasdas', 'dsadas', 'dsa', 'dasdas'),
+(4545, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 5432, 'sadsad', 'dasdsa', 'dasda', 'dsadsa', 'dasdas', 'dsadas', 'dsa', 'dasdas'),
+(4545, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 5432, 'sadsad', 'dasdsa', 'dasda', 'dsadsa', 'dasdas', 'dsadas', 'dsa', 'dasdas'),
+(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
+(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
+(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
+(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
+(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
+(12345, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 1234, 'dasdas', 'dadas', 'dasdas', 'dasdsa', 'si', 'dsadsa', '201', 'sadasds'),
+(132452, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 2132, '45320176', 'sdassa', 'dasdas', 'fdsfds', 'si', 'weqwqds', '201', 'dsasdas'),
+(31321, 'maximo', 'rodrigosebastianok@gmail.com', '2233127654', 1234, 'dsadas', 'dsadas', 'dasdas', 'dsadsa', 'si', 'dasdsa', '201', 'dasdas');
 
 -- --------------------------------------------------------
 
@@ -50,9 +67,10 @@ CREATE TABLE `alumnos` (
 --
 
 CREATE TABLE `fechas` (
-  `cuatrimestre` int(2) NOT NULL,
-  `inicio` date NOT NULL,
-  `final` date NOT NULL
+  `cuatrimestre` varchar(40) NOT NULL,
+  `inicio` varchar(40) NOT NULL,
+  `final` varchar(40) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -62,8 +80,8 @@ CREATE TABLE `fechas` (
 --
 
 CREATE TABLE `finales` (
-  `idMat` int(2) NOT NULL,
-  `fecha_f` date NOT NULL
+  `idMat` int(11) NOT NULL,
+  `fecha_f` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -73,8 +91,8 @@ CREATE TABLE `finales` (
 --
 
 CREATE TABLE `materias` (
-  `nombreM` varchar(50) NOT NULL,
-  `idMat` int(2) NOT NULL
+  `nombreM` text NOT NULL,
+  `idMat` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -84,9 +102,9 @@ CREATE TABLE `materias` (
 --
 
 CREATE TABLE `notas` (
-  `dni` varchar(11) NOT NULL,
-  `idMat` int(2) NOT NULL,
-  `nota` float NOT NULL,
+  `dni` int(11) NOT NULL,
+  `idMat` int(11) NOT NULL,
+  `nota` int(2) NOT NULL,
   `periodo` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -97,10 +115,10 @@ CREATE TABLE `notas` (
 --
 
 CREATE TABLE `relmatalu` (
-  `idMat` int(2) NOT NULL,
+  `idMat` int(11) NOT NULL,
   `aula` int(3) NOT NULL,
   `cuatrimestre` int(2) NOT NULL,
-  `profEncargado` varchar(50) NOT NULL
+  `profEncargado` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -110,9 +128,9 @@ CREATE TABLE `relmatalu` (
 --
 
 CREATE TABLE `secundario` (
-  `dni` varchar(11) NOT NULL,
-  `analiticoAlum` tinyint(1) NOT NULL,
-  `promedio` int(2) NOT NULL
+  `dni` int(11) NOT NULL,
+  `analiticoAlum` text NOT NULL,
+  `promedio` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -123,59 +141,19 @@ CREATE TABLE `secundario` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `email` varchar(200) NOT NULL,
+  `email` varchar(150) NOT NULL,
   `password` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `user`
---
-
-INSERT INTO `user` (`id`, `email`, `password`) VALUES
-(1, 'rodrigosebastianok@gmail.com', '12345678');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `alumnos`
+-- Indices de la tabla `fechas`
 --
-ALTER TABLE `alumnos`
-  ADD UNIQUE KEY `dni` (`dni`),
-  ADD UNIQUE KEY `aula` (`aula`);
-
---
--- Indices de la tabla `finales`
---
-ALTER TABLE `finales`
-  ADD PRIMARY KEY (`idMat`);
-
---
--- Indices de la tabla `materias`
---
-ALTER TABLE `materias`
-  ADD UNIQUE KEY `idMat` (`idMat`);
-
---
--- Indices de la tabla `notas`
---
-ALTER TABLE `notas`
-  ADD UNIQUE KEY `dni` (`dni`),
-  ADD UNIQUE KEY `idMat` (`idMat`);
-
---
--- Indices de la tabla `relmatalu`
---
-ALTER TABLE `relmatalu`
-  ADD UNIQUE KEY `idMat` (`idMat`),
-  ADD UNIQUE KEY `aula` (`aula`);
-
---
--- Indices de la tabla `secundario`
---
-ALTER TABLE `secundario`
-  ADD UNIQUE KEY `dni` (`dni`);
+ALTER TABLE `fechas`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `user`
@@ -188,45 +166,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `fechas`
+--
+ALTER TABLE `fechas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `alumnos`
---
-ALTER TABLE `alumnos`
-  ADD CONSTRAINT `alumnos_ibfk_1` FOREIGN KEY (`aula`) REFERENCES `relmatalu` (`aula`);
-
---
--- Filtros para la tabla `finales`
---
-ALTER TABLE `finales`
-  ADD CONSTRAINT `finales_ibfk_1` FOREIGN KEY (`idMat`) REFERENCES `materias` (`idMat`);
-
---
--- Filtros para la tabla `notas`
---
-ALTER TABLE `notas`
-  ADD CONSTRAINT `notas_ibfk_1` FOREIGN KEY (`dni`) REFERENCES `alumnos` (`dni`),
-  ADD CONSTRAINT `notas_ibfk_2` FOREIGN KEY (`idMat`) REFERENCES `materias` (`idMat`);
-
---
--- Filtros para la tabla `relmatalu`
---
-ALTER TABLE `relmatalu`
-  ADD CONSTRAINT `relmatalu_ibfk_1` FOREIGN KEY (`idMat`) REFERENCES `materias` (`idMat`);
-
---
--- Filtros para la tabla `secundario`
---
-ALTER TABLE `secundario`
-  ADD CONSTRAINT `secundario_ibfk_1` FOREIGN KEY (`dni`) REFERENCES `alumnos` (`dni`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

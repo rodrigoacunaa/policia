@@ -1,5 +1,6 @@
 <?php
-include("modulos/db.php");
+session_start();
+$email = $_SESSION['email'];
 include("modulos/funciones.php");
 destroyAdmin();
 ?>
@@ -30,10 +31,9 @@ destroyAdmin();
                             </ul>
                         </li>
                     </ul>
-         <div>
-           <form action="../policia/index.html  ">
-            <button class="btn btn-dark" type="submit"><i class="bi bi-arrow-90deg-left"></i></button>
-             </form>
+         <div><form action="modulos/logout.php" method="post">
+            <button class="btn btn-dark" name="logout" type="submit"><i class="bi bi-arrow-90deg-left"></i></button>
+            </form>
            </div>
              <!--!logout -->
                     </form>
@@ -204,8 +204,6 @@ destroyAdmin();
         </section>
         </div>
       </div>
-
-
 
 
 

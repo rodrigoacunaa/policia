@@ -10,9 +10,6 @@
 
     <!--swal cdn -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
-    <title>LOGIN</title>
   </head>
   <body>
     

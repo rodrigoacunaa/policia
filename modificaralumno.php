@@ -1,6 +1,7 @@
 <?php
-include("modulos/db.php");
+include("modulos/loginMod.php");
 include("modulos/funciones.php");
+$email = $_SESSION['email'];
 destroyAdmin();
 ?>
 <!DOCTYPE html>
