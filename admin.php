@@ -32,7 +32,7 @@ destroyAdmin();
                         </li>
                     </ul>
          <div><form action="modulos/logout.php" method="post">
-            <button class="btn btn-dark" name="logout" type="submit"><i class="bi bi-arrow-90deg-left"></i></button>
+            <button class="btn btn-dark" name="logout" type="submit">Logout</i></button>
             </form>
            </div>
              <!--!logout -->

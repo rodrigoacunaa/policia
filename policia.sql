@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2022 a las 08:08:40
+-- Tiempo de generación: 11-09-2022 a las 19:54:43
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -40,25 +40,31 @@ CREATE TABLE `alumnos` (
   `secundario` text NOT NULL,
   `paisNacimiento` text NOT NULL,
   `aula` varchar(3) NOT NULL,
-  `armaAsig` varchar(40) NOT NULL
+  `armaAsig` varchar(40) NOT NULL,
+  `estado` int(1) NOT NULL,
+  `fechaB` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distrito`, `domicilio`, `destino`, `comisariaD`, `secundario`, `paisNacimiento`, `aula`, `armaAsig`) VALUES
-(4545, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 5432, 'sadsad', 'dasdsa', 'dasda', 'dsadsa', 'dasdas', 'dsadas', 'dsa', 'dasdas'),
-(4545, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 5432, 'sadsad', 'dasdsa', 'dasda', 'dsadsa', 'dasdas', 'dsadas', 'dsa', 'dasdas'),
-(4545, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 5432, 'sadsad', 'dasdsa', 'dasda', 'dsadsa', 'dasdas', 'dsadas', 'dsa', 'dasdas'),
-(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
-(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
-(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
-(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
-(21212, 'maximo', 'rodrigosebastianok@gmail.com', '121212', 1234, 'asdasd', 'dasdas', 'dasdas', 'dadsa', 'si', 'argentina', '201', 'sasa'),
-(12345, 'Anacleto', 'rodrigosebastianok@gmail.com', '2233127654', 1234, 'dasdas', 'dadas', 'dasdas', 'dasdsa', 'si', 'dsadsa', '201', 'sadasds'),
-(132452, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 2132, '45320176', 'sdassa', 'dasdas', 'fdsfds', 'si', 'weqwqds', '201', 'dsasdas'),
-(31321, 'maximo', 'rodrigosebastianok@gmail.com', '2233127654', 1234, 'dsadas', 'dsadas', 'dasdas', 'dsadsa', 'si', 'dasdsa', '201', 'dasdas');
+INSERT INTO `alumnos` (`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distrito`, `domicilio`, `destino`, `comisariaD`, `secundario`, `paisNacimiento`, `aula`, `armaAsig`, `estado`, `fechaB`) VALUES
+(45320176, 'ernesto', 'rodrigosebastianok@gmail.com', '2233127654', 7109, 'este', 'ese', 'ala', 'aca', 'si', 'ARGENTINA', '201', 'bereta', 1, '2022-09-12'),
+(12345654, 'carlos', 'theshitman27@gmail.com', '2243245687', 5434, 'aaa', 'bbb', 'ccc', 'nnn', 'si', 'argentina', '201', 'bereta', 1, '2022-09-13'),
+(12543675, 'bastian baez', 'alcuri123@gmail.com', '2243245687', 6543, 'gdgdsa', 'shahs', 'hhh', 'ashsah', 'si', 'argentina', '201', 'bereta', 1, '2022-09-14'),
+(54676876, 'tomas', 'pepe1233@gmail.com', '2243245687', 7654, 'hdhdsh', 'dhhdhsd', 'hdshdh', 'djdjsjd', 'si', 'argentina', '201', 'bereta', 1, '2022-09-11'),
+(34251665, 'ailen', 'theshitman27@gmail.com', '2243245687', 5643, 'casjhash', 'jsdhahda', 'hdasdag', 'hdfshsdhsd', 'si', 'argentina', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
+(45678987, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 7654, 'gdgsdh', 'hdshdsh', 'hhhsdhds', 'hsdhdsh', 'SI', 'Argentina', '201', 'bereta', 0, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -146,6 +152,13 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `password`) VALUES
+(1, 'rodrigosebastianok@gmail.com', '12345678');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -175,7 +188,7 @@ ALTER TABLE `fechas`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
