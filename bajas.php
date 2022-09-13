@@ -116,7 +116,7 @@ destroyAdmin();
                         text: "Lo podrá encontrar en alumnos dados de baja",
                         icon: "success"
                     }).then(function() {
-                         $("#form").trigger('reset');
+                         window.location="bajas.php";
                     });
                     
                     }
