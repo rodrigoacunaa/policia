@@ -28,7 +28,7 @@ destroyAdmin();
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
             <div class="container px-4 px-lg-5">
-                <img src="assets/imagenes/alto somos la polisia.jpg" width="30" height="30" class="mr-2 mb-1" alt="" id="logo"><b style="color:white; padding-left:10px;">Escuela de policia "juan Vucetich"</b>
+                <img src="assets/imagenes/alto somos la polisia.jpg" width="30" height="30" class="mr-2 mb-1" alt="" id="logo"><b style="color:white; padding-left:10px;">Escuela de policia "Juan Vucetich"</b>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -47,38 +47,46 @@ destroyAdmin();
           <!-- Titulo -->
     <h1 class="text-center display-4 pb-5 mb-2 mt-4"  style="padding-top: 5rem;">Carga de datos de: Domicilio- Comisaria del domicilio- destino</h1>
     <!-- !Titulo -->
-    <div class="container-fluid mt-2 p-0">
+    <div class="container-fluid mt-2 p-4">
                   <!--formulario de registro -->
-        <form action="../modules/regModPat.php" method="post">
-                <div class="form-row pt-2">
+        <form action="modulos/cargardatosmod.php" method="post">
+            <div class="form-row pt-2">
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Domicilio</label>
-                    <input type="text" class="form-control" id="validationCustom01" name="nombre" required>
+                    <input type="text" class="form-control" id="validationCustom01" name="domicilioid" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom02">Localidad</label>
-                    <input type="text" class="form-control" id="validationCustom02" name="apellido" required>
+                    <input type="text" class="form-control" id="validationCustom02" name="localidadid" required>
                   </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                       <label for="inputMail">Codigo postal</label>
-                      <input type="text" class="form-control" id="inputMail" aria-describedby="emailHelp" name="email" required>
+                      <input type="text" class="form-control" id="inputMail" aria-describedby="emailHelp" name="codigopostalid" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">Comisaria Deomicilio</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <label for="validationCustom03">Comisaria Domicilio</label>
+                        <input type="text" class="form-control" id="validationCustom03" name="comisariadomicilioid" required>
                     </div>
-                </div>
+                    </div>
+               
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Destino</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="ent_soc" required>
+                        <input type="text" class="form-control" id="validationCustom03" name="destinoid" required>
                     </div>
 
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Telefono destino</label>
-                        <input type="text" class="form-control" id="validationCustom03" name="dni" required>
+                        <input type="text" class="form-control" id="validationCustom03" name="telefonodestinoid" required>
                     </div>
+                </div>
+                <button type="button" class="btn btn-primary px-5 " style="margin-left:43%">Cargar Datos</button>
+                </div>
+                
+                </form>
+                </div>
+
                   
              
