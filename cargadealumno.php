@@ -91,14 +91,14 @@ destroyAdmin();
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Secundario</label>
-                        <select id="secundario">
+                        <select class="form-select" id="secundario">
                             <option value="SI">SI</option>
                             <option value="NO">NO</option>
                         </select>
                     </div> 
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Pais de nacimiento</label>
-                    <select name="paisNacimiento" id="paisNacimiento">
+                    <select class="form-control" name="paisNacimiento" id="paisNacimiento">
                     <option value="Elegir" id="AF">Elegir opción</option>
                     <option value="Afganistán" id="AF">Afganistán</option>
                     <option value="Albania" id="AL">Albania</option>
@@ -348,15 +348,16 @@ destroyAdmin();
                         <input type="text" class="form-control" id="arma" name="dni" required>
                     </div>
                 <br>
-                <button class="btn btn-primary" type="submit" id="submitA" style="cursor: pointer;">Agregar</button>
-                <a class="btn btn-secondary" style="cursor: pointer;" href="admin.php">Volver al inicio</a>
+                <button class="btn btn-primary" type="submit" id="submitA" style="cursor: pointer;border-radius:  10px;">Agregar</button>
+                <div style="padding-left:20px">
+                <a class="btn btn-secondary" style="cursor: pointer;border-radius:  10px;" href="admin.php">Volver al inicio</a></div>
             </form>
         </div>
-        </div>
-        <footer class="py-5 bg-dark">
+        </div><div style="padding-top:  10%;">
+        <footer class="py-5 bg-dark ">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
-        
+        </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

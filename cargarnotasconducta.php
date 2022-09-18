@@ -25,6 +25,12 @@ destroyAdmin();
         <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <style type="text/css">
+        #notas{
+            width: 50px;
+        };
+
+    </style>
  <!-- Navigation-->
  <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
             <div class="container px-4 px-lg-5">
@@ -39,47 +45,41 @@ destroyAdmin();
             <button class="btn btn-primary" name="logout" type="submit" onclick="bypass();">Regresar</button>
            </div>
              <!--!logout -->
-                    </form>
                 </div>
             </div>
         </nav>
-       
-                <table class="table caption-top">
-        <caption>Lista de alumnos</caption>
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">DNI</th>
-            <th scope="col">Apellidos y Nombres</th>
-            <th scope="col">Notas</th>
-            <th scope="col"><a href="">Subir</a></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td> <input type="text"></td>
-            <td></td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td> <input type="text"></td>
-            <td></td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td> <input type="text"></td>
-            <td></td>
-            </tr>
-        </tbody>
-        </table>
+        <div class="container-fluid mt-2 p-4">
+     <table class="table caption-top">
+  <thead>
+    <tr>      
+    	<th scope="col">DNI</th>
+      <th scope="col">Nombre y Apellido</th>
+      <th scope="col">Calificacion</th>
+        <th scope="col"><a href="..">Sunir</a> </th>
+    </tr>
+  </thead>
+  
+        <?php
 
+	$sql = "SELECT * FROM `alumnos`";
+
+	$query = mysqli_query($connection, $sql);
+
+	$row = mysqli_fetch_array($query);
+  
+
+	foreach($query as $row){
+    $dni=$row['dni'];
+
+    echo "<tr>";
+    echo "<td scope='row'>$dni</td>";
+
+		echo '<td scope="row">'. $row['nomApe'].'</td>';
+        echo "<td> <input class='form-control' id='notas'> </td></a>";
+    echo '</tr>';
+	}
+ ?>
         <script type="text/javascript">
                     function bypass(){window.location="admin.php";};
         </script>
+        </body>
