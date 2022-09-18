@@ -18,23 +18,32 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <div id="div1">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
+   <!--     <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="assets/imagenes/alto somos la polisia.jpg" alt="" width="40" height="40" class="d-inline-block align-text-top">
+                Escuela de policia "juan Vucetich
+              </a>
+            </div>
+          </nav> -->
+         <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
             <div class="container px-4 px-lg-5">
-                <img src="assets/imagenes/alto somos la polisia.jpg" width="30" height="30" class="mr-2 mb-1" href="index.html" alt=""  id="logo"><b style="color:white; padding-left:10px;">Escuela de policia "juan Vucetich"</b>
+                <img src="assets/imagenes/alto somos la polisia.jpg" width="40" height="40" class="mr-2 mb-1" href="index.html" alt=""  id="logo"><h5 style="color:white; padding-left:20px;padding-top:auto">Escuela de Policia "Juan Vucetich"</h5>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button style="border-radius: 40px ; height:20;" ><a href="login.php" class="btn btn-primary btn-lg rounded-pill px-3s py-3">Ingresar</a></button>
+                    
+                        <button class="btn btn-primary" onclick="animacion();">Ingresar</button>
                         
-                    </form>
+                    
                 </div>
             </div>
-        </nav>
+        </nav>  
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -102,6 +111,14 @@
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
-
+    </div>
     </body>
+    <script type="text/javascript">
+        function animacion() {
+   
+                setTimeout(inicio, 1000);
+                document.getElementById('div1').innerHTML = "<center><div class='medio spinner-border text-success' role='status'></div></center>";
+                function inicio(){window.location="login.php";}	
+};
+    </script>
 </html>
