@@ -47,7 +47,7 @@ destroyAdmin();
         </nav>
          <!-- Section-->
           <!-- Header-->
-    <div class="card text-center">
+        <div class="card text-center">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
 
@@ -62,21 +62,22 @@ destroyAdmin();
                 <a class="nav-link" href="impresiones.php" >Impresiones</a>
             </li>
 
-</ul> </div>
-            <div class="card-body">
-
-             <section class="py-5">
+            <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
-                        <div class="card h-10">                             
+                        <div class="card h-10">              
+                            <!-- Product image-->
+                           
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                               
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Reprocesar Datos</h5>  
                                 </div>
                             </div>
                         
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -84,14 +85,16 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                            
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                  
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Totales del curso</h5>
                                 </div>
                             </div>
-                          
+                            <!-- Product actions-->
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -99,14 +102,15 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                           
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                   
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Situacion academica</h5>
                                 </div>
                             </div>
-                           
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -114,13 +118,15 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                          
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                         <h5 class="fw-bolder">Notifiacaciones de materias adeudadas por el alumno</h5>
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Notifiacaciones de materias adeudadas por el alumno</h5>
                                 </div>
                             </div>
-                            
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -128,15 +134,16 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                          
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Notificaciones de alumnos por materias adeudadas</h5>
-                                   
+                                    <!-- Product reviews-->
                                 </div>
                             </div>
-                           
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -144,14 +151,15 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                          
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Distribucion Aulica</h5>
                                 </div>
                             </div>
-                          
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -159,14 +167,15 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                          
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Distribucion aulica por sexo</h5>
                                 </div>
                             </div>
-                            
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificaciones</a></div>
                             </div>
@@ -174,14 +183,15 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                          
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                            
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Generar archivo para excel</h5>
                                 </div>
                             </div>
-                        
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
@@ -189,15 +199,16 @@ destroyAdmin();
                     </div>
                     <div class="col mb-5">
                         <div class="card h-10">
-                   
+                            <!-- Product image-->
+                            <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                               
+                                    <!-- Product name-->
                                     <h5 class="fw-bolder">Detalle de cantidad de alumnos por materia</h5>
-                                   
+                                    <!-- Product reviews-->
                                 </div>
                             </div>
-                            
+                            <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/modificar</a></div>
                             </div>

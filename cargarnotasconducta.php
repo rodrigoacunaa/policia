@@ -79,3 +79,7 @@ destroyAdmin();
             </tr>
         </tbody>
         </table>
+
+        <script type="text/javascript">
+                    function bypass(){window.location="admin.php";};
+        </script>

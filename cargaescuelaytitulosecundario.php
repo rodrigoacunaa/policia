@@ -81,6 +81,8 @@ destroyAdmin();
                         <label for="validationCustom03">Carga Observaciones</label>
                         <input type="text" class="form-control" id="validationCustom03" name="dni" required>
                     </div>
-                  
+        <script type="text/javascript">
+                    function bypass(){window.location="admin.php";};
+        </script>
 </body>
 </html>

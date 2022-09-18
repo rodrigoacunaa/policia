@@ -98,7 +98,7 @@ destroyAdmin();
                     </div> 
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Pais de nacimiento</label>
-                        <select name="paisNacimiento" id="paisNacimiento">
+                    <select name="paisNacimiento" id="paisNacimiento">
                     <option value="Elegir" id="AF">Elegir opción</option>
                     <option value="Afganistán" id="AF">Afganistán</option>
                     <option value="Albania" id="AL">Albania</option>

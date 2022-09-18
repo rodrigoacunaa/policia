@@ -46,7 +46,7 @@ destroyAdmin();
           <!-- Titulo -->
     <h1 class="text-center display-4 pb-5 mb-2 mt-4"  style="padding-top: 5rem;">Carga Telefonos y Mails</h1>
     <!-- !Titulo -->
-    <div class="container-fluid mt-2 p-0">
+    <div class="container-fluid mt-2 p-4">
                   <!--formulario de registro -->
         <form action="../modules/regModPat.php" method="post">
                 <div class="form-row pt-2">
@@ -58,5 +58,16 @@ destroyAdmin();
                     <label for="validationCustom02">Mails</label>
                     <input type="text" class="form-control" id="validationCustom02" name="apellido" required>
                   </div>
+                  </div>
+                <button type="button" class="btn btn-primary px-5 " style="margin-left:40%">Cargar Datos</button>
                 </div>
-               
+                
+                </form>
+                </div>
+       <script>
+                function bypass(){window.location="datosdeinteres.php";};
+        </script>
+</body>
+
+</html>                  
+             

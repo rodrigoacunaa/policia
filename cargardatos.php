@@ -86,6 +86,10 @@ destroyAdmin();
                 
                 </form>
                 </div>
+       <script>
+                function bypass(){window.location="datosdeinteres.php";};
+        </script>
+</body>
 
-                  
+</html>                  
              

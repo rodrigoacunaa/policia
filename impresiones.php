@@ -22,7 +22,7 @@ destroyAdmin();
     </head>
     <body>
          <!-- Navigation-->
- <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
             <div class="container px-4 px-lg-5">
                 <img src="assets/imagenes/alto somos la polisia.jpg" width="40" height="40" class="mr-2 mb-1" alt="" id="logo"><h5 style="color:white; padding-left:20px;padding-top:auto">Escuela de Policia "Juan Vucetich"</h5>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -31,9 +31,15 @@ destroyAdmin();
                             </ul>
                         </li>
                     </ul>
-         <div>
-            <button class="btn btn-primary" name="logout" type="submit" onclick="bypass();">Regresar</button>
+         <div><form action="modulos/logout.php" method="post">
+            <button class="btn btn-dark" name="logout" type="submit">Logout</i></button>
+            </form>
            </div>
+             <!--!logout -->
+                    </form>
+                </div>
+            </div>
+        </nav>
              <!--!logout -->
                     </form>
                 </div>
@@ -54,7 +60,8 @@ destroyAdmin();
             </li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="true" href="impresiones.php" >Impresiones</a>
-            </li>
+            </li></ul> </div>
+            <div class="card-body">
 
             <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">

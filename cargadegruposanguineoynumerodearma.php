@@ -46,17 +46,29 @@ destroyAdmin();
           <!-- Titulo -->
     <h1 class="text-center display-4 pb-5 mb-2 mt-4"  style="padding-top: 5rem;">Carga de grupo sanguineo numero y tipo de arma</h1>
     <!-- !Titulo -->
-    <div class="container-fluid mt-2 p-0">
+    <div class="container-fluid mt-2 p-4">
                   <!--formulario de registro -->
         <form action="../modules/regModPat.php" method="post">
                 <div class="form-row pt-2">
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Grupo sanguineo</label>
-                    <input type="text" class="form-control" id="validationCustom01" name="nombre" required>
+                    <input type="text" class="form-control" id="validationCustom01" name="gruposanguineoid" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom02">Tipo y nº Arma</label>
-                    <input type="text" class="form-control" id="validationCustom02" name="apellido" required>
+                    <input type="text" class="form-control" id="validationCustom02" name="tiponumeroarma" required>
                   </div>
+                  </div>
+                <button type="button" class="btn btn-primary px-5 " style="margin-left:40%">Cargar Datos</button>
                 </div>
+                
+                </form>
+                </div>
+       <script>
+                function bypass(){window.location="datosdeinteres.php";};
+        </script>
+</body>
+
+</html>                  
+         
                
