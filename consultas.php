@@ -21,6 +21,12 @@ destroyAdmin();
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+    <style>
+            #card{
+                width: 220px;
+                height: 195px ;
+            };
+        </style>
          <!-- Navigation-->
         <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
             <div class="container px-4 px-lg-5">
@@ -69,7 +75,7 @@ destroyAdmin();
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
-                        <div class="card h-10">                             
+                        <div id="card" class="card h-10">                             
                             <div class="card-body p-4">
                                 <div class="text-center">
                                
@@ -83,7 +89,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                             
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -98,7 +104,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                            
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -113,7 +119,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                           
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -127,7 +133,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                           
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -143,7 +149,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                           
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -158,7 +164,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                           
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -173,7 +179,7 @@ destroyAdmin();
                         </div>
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                           
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -188,7 +194,7 @@ destroyAdmin();
                         </div>x
                     </div>
                     <div class="col mb-5">
-                        <div class="card h-10">
+                        <div id="card" class="card h-10">
                    
                             <div class="card-body p-4">
                                 <div class="text-center">

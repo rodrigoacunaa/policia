@@ -7,8 +7,33 @@
 	<title>Alumnos dados de baja</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg "style="background-color: rgb(0, 0, 139);" >
+  <div class="container px-4 px-lg-5">
+      <img src="assets/imagenes/alto somos la polisia.jpg" alt="" width="40" height="40" class="mr-2 mb-1" alt="" id="logo"><span>
+      <h5 style="color:white; padding-left:20px;padding-top:auto">Escuela de Policia "Juan Vucetich"</h5></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    
+   <div>
+            <button class="btn btn-primary" name="logout" type="submit" onclick="bypass();">Regresar</button>
+           </div>   
+  </div>
+</nav>
+    <!-- Navigation-->
+ <!--         
+      
+ <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 139);" >
+            <div class="container px-4 px-lg-5">
+                <img src="assets/imagenes/alto somos la polisia.jpg" width="40" height="40" class="mr-2 mb-1" alt="" id="logo"><h5 style="color:white; padding-left:20px;padding-top:auto">Escuela de Policia "Juan Vucetich"</h5>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            </ul>
+                        </li>
+                    </ul>
+          
+           </div> -->
 	<div class="p-5 text-center bg-light">
-    <h1 class="mb-3">Consulta de dados de baja</h1>
+    <h1 class="mb-3">Consulta de alumnos dados de baja</h1>
   </div>
 
 	<div class="row">      
@@ -69,5 +94,10 @@
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
 
+        <script type="text/javascript">
+                function bypass() {
+                    window.location="admin.php";
+                }
+            </script>
 </body>
 </html>
