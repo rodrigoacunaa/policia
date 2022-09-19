@@ -31,7 +31,6 @@ destroyAdmin();
                     </ul>
          <div>
             <button class="btn btn-primary" name="logout" type="submit" onclick="bypass();">Regresar</button>
-            
            </div>
              <!--!logout -->
                     </form>
