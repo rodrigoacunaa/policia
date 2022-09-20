@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2022 a las 19:54:43
+-- Tiempo de generación: 20-09-2022 a las 07:37:13
 -- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,6 +65,22 @@ INSERT INTO `alumnos` (`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distri
 (546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
 (546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
 (45678987, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 7654, 'gdgsdh', 'hdshdsh', 'hhhsdhds', 'hsdhdsh', 'SI', 'Argentina', '201', 'bereta', 0, '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cc_titulosencundario`
+--
+
+CREATE TABLE `cc_titulosencundario` (
+  `id` int(11) NOT NULL,
+  `nomApe` text NOT NULL,
+  `tituloSecundario` varchar(900) NOT NULL,
+  `resolucion` varchar(900) NOT NULL,
+  `escuela` varchar(90) NOT NULL,
+  `distrito` varchar(60) NOT NULL,
+  `observaciones` varchar(900) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -163,6 +179,12 @@ INSERT INTO `user` (`id`, `email`, `password`) VALUES
 --
 
 --
+-- Indices de la tabla `cc_titulosencundario`
+--
+ALTER TABLE `cc_titulosencundario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `fechas`
 --
 ALTER TABLE `fechas`
@@ -177,6 +199,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `cc_titulosencundario`
+--
+ALTER TABLE `cc_titulosencundario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `fechas`
