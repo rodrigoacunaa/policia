@@ -130,7 +130,7 @@ destroyAdmin();
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div id="card" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div id="card" class="card-footer p-4 pt-4 border-top-0 bg-transparent">
                               <div><a class="text-center"><a class="btn btn-outline-dark mt-auto" href="datosdeinteres.php">Cargar/modificar</a></div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ destroyAdmin();
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div id="card" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div id="card" class="card-footer p-4 pt-4 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver</a></div>
                             </div>
                         </div>
@@ -160,14 +160,14 @@ destroyAdmin();
                             <div id="card" class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Cargar/Cambiar notas por materia</h5>
+                                    <h5 class="fw-bolder">Cargar / Aula</h5>
                                     <!-- Product price-->
                                 </div>
                             </div>
                            
                             <!-- Product actions-->
-                            <div id="card" class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/modificar</a></div>
+                            <div id="card" class="card-footer p-4 pt-5 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="cargarCambiosdeaula.php">Cargar/modificar</a></div>
                             </div>
                         </div>
                     </div>
@@ -218,6 +218,22 @@ destroyAdmin();
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="adminBajas.php">Ver alumnos</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div id="card" class="card h-10">
+                            <!-- Product image-->
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Cargar/Cambiar notas por materia</h5>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-2 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Cargar/Modificar</a></div>
                             </div>
                         </div>
                     </div>
