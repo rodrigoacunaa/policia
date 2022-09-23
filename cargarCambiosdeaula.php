@@ -27,7 +27,7 @@ destroyAdmin();
 <body>
     <style type="text/css">
         #aula{
-            width: 50px;
+            width: 57px;
         };
 
     </style>
@@ -52,10 +52,10 @@ destroyAdmin();
      <table class="table caption-top">
   <thead>
     <tr>      
-    	<th scope="col">DNI</th>
-      <th scope="col">Aula</th>
-      <th scope="col">Nombre y Apellido</th>
-        <th scope="col"><a href="..">Subir</a> </th>
+    <th scope="col">DNI</th>
+    <th scope="col">Aula</th>
+    <th scope="col">Nombre y Apellido</th>
+    <th scope="col">Editar </th>
     </tr>
   </thead>
   
@@ -72,14 +72,76 @@ destroyAdmin();
     $dni=$row['dni'];
 
     echo "<tr>";
-    echo "<td scope='row'>$dni</td>";
-    echo "<td> <input class='form-control' id='aula' value=".$row['aula']."> </td></a>";
-		echo '<td scope="row">'. $row['nomApe'].'</td>';
-        
+    echo "<td scope='row' id='dni'>$dni</td>";
+    echo "<td> <input class='form-control' id='aula' value=".$row['aula']." > </td></a>";
+	echo "<td scope='row' id='nombreyapellido'>". $row['nomApe']."</td>";
+    echo "<td scope='row'> <button type='button' class='btn btn-primary editbtn' data-toggle='modal' data-target='#editar'>
+    Editar</button></td>";
     echo '</tr>';
 	}
  ?>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <input class='form-control' id="aula" name="aula" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+    <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+                    <button type="button" class="close" data-dismiss="modal" arial-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--Formulario -->
+                    <form action="modificaraula.php" method="POST">
+                        <div class="form-group">
+                            <label for="">Aula Nueva</label>
+                            <input class="form-control" name="aula" id="aula">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>        
+</div>
+
+
         <script type="text/javascript">
                     function bypass(){window.location="admin.php";};
+
+                $('.editbtn').on('click', function(){
+                    $tr=$(this).closest('tr');
+                    var datos = $tr.children("td").map(function(){
+                        return $(this).text();
+                    });
+                    $('#aula').val(datos[1]);
+                });
+
         </script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
         </body>
