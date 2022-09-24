@@ -26,7 +26,7 @@ destroyAdmin();
 </head>
 <body>
     <style type="text/css">
-        #aula .dni{
+      #inputaulas{
             width: 57px;
         };
 
@@ -48,9 +48,9 @@ destroyAdmin();
                 </div>
             </div>
     </nav>
-        <div class="container-fluid mt-2 " style="padding-left:30%;">
-
-     <table class="table caption-top " style="width: 500px;">
+        <div class="d-flex justify-content-center" >
+        <!--style="padding-left:30%;"-->
+     <table class="table caption-top " style="width: 550px;">
     
   <thead style="text-align:center"> 
     <tr>      
@@ -59,28 +59,44 @@ destroyAdmin();
     </tr>
   </thead>
   <tbody style="text-align:center">
+  <form action="modulos/cargaralumnosporaula.php" method="POST">
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
+      <th scope="row" name="numaula7">7</th>
+      <td class="d-flex justify-content-center" colspan="2"><input type="text" name="aula7" class="form-control inputaulas" style="width: 57px;"></td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
+      <th scope="row" name="numaula8">8</th>  
+      <td class="d-flex justify-content-center"><input type="text" name="aula8" class="form-control inputaulas" style="width: 57px;"></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <th scope="row" name="numaula9">9</th>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula9" class="form-control inputaulas" style="width: 57px;"></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <th scope="row" name="numaula10">10</th>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula10" class="form-control inputaulas" style="width: 57px;"></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <th scope="row" name="numaula11">11</th>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula11" class="form-control inputaulas" style="width: 57px;"></td>
     </tr>
-  </tbody>
+    <tr>
+      <th scope="row" name="numaula12">12</th>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula12" class="form-control inputaulas" style="width: 57px;"></td>
+    </tr>
+    <tr>
+    <th>
+    </th>
+
+      <td><button type="submit" class="btn btn-primary "  >Actualizar</button></td>
+    
+    </tr>
+    </form>
+    </tbody>
+  
+  
     </table>
+    
     </div>
   
 
@@ -88,7 +104,7 @@ destroyAdmin();
 
 
         <script type="text/javascript">
-                    function bypass(){window.location="consulta.php";};
+                    function bypass(){window.location="consultas.php";};
 
                 $('.editbtn').on('click', function(){
                     $tr=$(this).closest('tr');
