@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-09-2022 a las 07:37:13
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Tiempo de generación: 24-09-2022 a las 18:32:06
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,10 +50,10 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distrito`, `domicilio`, `destino`, `comisariaD`, `secundario`, `paisNacimiento`, `aula`, `armaAsig`, `estado`, `fechaB`) VALUES
-(45320176, 'ernesto', 'rodrigosebastianok@gmail.com', '2233127654', 7109, 'este', 'ese', 'ala', 'aca', 'si', 'ARGENTINA', '201', 'bereta', 1, '2022-09-12'),
-(12345654, 'carlos', 'theshitman27@gmail.com', '2243245687', 5434, 'aaa', 'bbb', 'ccc', 'nnn', 'si', 'argentina', '201', 'bereta', 1, '2022-09-13'),
+(45320176, 'ernesto', 'rodrigosebastianok@gmail.com', '2233127654', 7109, 'este', 'ese', 'ala', 'aca', 'si', 'ARGENTINA', '123', 'bereta', 1, '2022-09-12'),
+(12345654, 'carlos', 'theshitman27@gmail.com', '2243245687', 5434, 'aaa', 'bbb', 'ccc', 'nnn', 'si', 'argentina', '444', 'bereta', 1, '2022-09-13'),
 (12543675, 'bastian baez', 'alcuri123@gmail.com', '2243245687', 6543, 'gdgdsa', 'shahs', 'hhh', 'ashsah', 'si', 'argentina', '201', 'bereta', 1, '2022-09-14'),
-(54676876, 'tomas', 'pepe1233@gmail.com', '2243245687', 7654, 'hdhdsh', 'dhhdhsd', 'hdshdh', 'djdjsjd', 'si', 'argentina', '201', 'bereta', 1, '2022-09-11'),
+(54676876, 'tomas alcuri', 'tomasalcuri@gmail.com', '2246588707', 7107, 'santa teresita', 'calle 11 Nº 1603', 'hdshdh', 'djdjsjd', 'si', 'argentina', '201', 'bereta', 1, '2022-09-11'),
 (34251665, 'ailen', 'theshitman27@gmail.com', '2243245687', 5643, 'casjhash', 'jsdhahda', 'hdasdag', 'hdfshsdhsd', 'si', 'argentina', '201', 'bereta', 0, '0000-00-00'),
 (546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
 (546376728, 'Anacleto', 'rodrigo12@gmail.com', '2233127654', 6767, 'dsadsa', 'dasdsa', 'dadsa', 'dsadsa', 'SI', '', '201', 'bereta', 0, '0000-00-00'),
@@ -117,6 +117,28 @@ CREATE TABLE `materias` (
   `idMat` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `materias`
+--
+
+INSERT INTO `materias` (`nombreM`, `idMat`) VALUES
+('Derecho Penal', 1),
+('Cibercrimen y Delitos Informaticos', 2),
+('Bioseguridad y Primeros Auxilios', 3),
+('Perspectiva de Genero y Diversidad', 4),
+('Derecho Procesal Penal', 5),
+('Práctica del Lenguaje y Comunicaíon', 6),
+('Derecho Constitucional y Derechos Humanos', 7),
+('Seguridad Pública y Policía de Proximidad', 8),
+('Manejo y Mantenimiento de Móviles Policiales', 9),
+('Teorias de Intervencíon y Procedimientos Policial', 10),
+('Educación Física Aplicada a la Función Policial', 11),
+('Técnicas de Investigación Criminal', 12),
+('Defensa Personal Policial', 13),
+('Armamento y Tiro Policial', 14),
+('Régimen Legal de la Profesión Policial', 15),
+('Prácticas Profesionalizantes', 16);
+
 -- --------------------------------------------------------
 
 --
@@ -172,7 +194,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`) VALUES
-(1, 'rodrigosebastianok@gmail.com', '12345678');
+(1, 'rodrigosebastianok@gmail.com', '12345678'),
+(2, 'tomasalcuri@gmail.com', '123');
 
 --
 -- Índices para tablas volcadas
@@ -189,6 +212,12 @@ ALTER TABLE `cc_titulosencundario`
 --
 ALTER TABLE `fechas`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `materias`
+--
+ALTER TABLE `materias`
+  ADD PRIMARY KEY (`idMat`);
 
 --
 -- Indices de la tabla `user`
@@ -213,10 +242,16 @@ ALTER TABLE `fechas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `materias`
+--
+ALTER TABLE `materias`
+  MODIFY `idMat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

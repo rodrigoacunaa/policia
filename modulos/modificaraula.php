@@ -6,8 +6,7 @@
 
 
    $sql = mysqli_query($connection,"UPDATE `alumnos` SET `aula`='$aulanueva' WHERE dni = '$dni'");
-
-    header("Location:../cargarCambiosdeaula.php");
+   header("Location:../cargarCambiosdeaula.php");
     
     
     
