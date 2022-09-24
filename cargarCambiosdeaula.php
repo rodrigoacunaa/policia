@@ -26,7 +26,7 @@ destroyAdmin();
 </head>
 <body>
     <style type="text/css">
-        #aula{
+        #aula .dni{
             width: 57px;
         };
 
@@ -72,8 +72,8 @@ destroyAdmin();
     $dni=$row['dni'];
 
     echo "<tr>";
-    echo "<td scope='row' id='dni'>$dni</td>";
-    echo "<td> <input class='form-control' id='aula' value=".$row['aula']." > </td></a>";
+    echo "<td scope='row' name='dni' id='dni'>$dni</td>";
+    echo "<td scope='row'  id='aula'>" . $row['aula']. "</td>";
 	echo "<td scope='row' id='nombreyapellido'>". $row['nomApe']."</td>";
     echo "<td scope='row'> <button type='button' class='btn btn-primary editbtn' data-toggle='modal' data-target='#editar'>
     Editar</button></td>";
@@ -114,14 +114,19 @@ destroyAdmin();
                 </div>
                 <div class="modal-body">
                     <!--Formulario -->
-                    <form action="modificaraula.php" method="POST">
+                    <form action="modulos/modificaraula.php" method="POST">
                         <div class="form-group">
-                            <label for="">Aula Nueva</label>
-                            <input class="form-control" name="aula" id="aula">
+                            <label for="">DNI CORRESPONDIENTE</label>
+                            <input class="form-control" name="dni1" id="dni">
+                            <label name="aula" id="aula"></label>
                         </div>
-                        <div class="modal-footer">
+                        <div class="form-group">
+                        <label >AULA NUEVA</label>
+                        <input class="form-control" name="aulan" id="aulan">
+                        </div>
+                        <div class="modal-footer pt-3" >
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
                         </div>
                         
                     </form>
@@ -139,7 +144,9 @@ destroyAdmin();
                     var datos = $tr.children("td").map(function(){
                         return $(this).text();
                     });
-                    $('#aula').val(datos[1]);
+                    
+                    $('#dni').val(datos[0]);
+                    $('#aulan').val(datos[1]);      
                 });
 
         </script>
