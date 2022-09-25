@@ -48,12 +48,12 @@ destroyAdmin();
             <h1 class="display-4 pb-5 mb-2 mt-1"  style="padding-top: 5rem;">Carga Inasistencias por Aulas</h1>
                 <form class="row"> 
                     <div class="col-12 col-md-6 mx-auto">
-                        <a class="btn btn-primary mb-3 w-100" href="cargardatos.php">Aula 7</a>
-                        <a class="btn btn-primary mb-3 w-100" href="cargartelefonosmails.php">Aula 8</a>
-                        <a class="btn btn-primary mb-3 w-100" href="cargadegruposanguineoynumerodearma.php">Aula 9</a>
-                        <a class="btn btn-primary mb-3 w-100" href="cargardatos.php">Aula 10</a>
-                        <a class="btn btn-primary mb-3 w-100" href="cargartelefonosmails.php">Aula 11</a>
-                        <a class="btn btn-primary mb-3 w-100" href="cargadegruposanguineoynumerodearma.php">Aula 12</a>
+                        <a class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdropa">Aula 7</a>
+                        <a class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Aula 8</a>
+                        <a class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdrope">Aula 9</a>
+                        <a class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdropi">Aula 10</a>
+                        <a class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdropo">Aula 11</a>
+                        <a class="btn btn-primary mb-3 w-100" data-bs-toggle="modal" data-bs-target="#staticBackdropu">Aula 12</a>
                     </div>
                 </form>
         </div> 
@@ -65,5 +65,118 @@ destroyAdmin();
         <script type="text/javascript">
                     function bypass(){window.location="admin.php";};
         </script>
+
+
+    <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdropa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inasistencias Aula 7</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inasistencias Aula 8</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        HOLA TOBI
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdrope" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inasistencias Aula 9</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        HOLA TOMI
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdropi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inasistencias Aula 10</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        HOLA TOMI33
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdropo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inasistencias Aula 11</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        HOLA TOMI22
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="staticBackdropu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inasistencias Aula 12</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        HOLA TOMI21
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
