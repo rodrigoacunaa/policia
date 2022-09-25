@@ -62,27 +62,27 @@ destroyAdmin();
   <form action="modulos/cargaralumnosporaula.php" method="POST">
     <tr>
       <th scope="row" name="numaula7">7</th>
-      <td class="d-flex justify-content-center" colspan="2"><input type="text" name="aula7" class="form-control inputaulas" style="width: 57px;"></td>
+      <td class="d-flex justify-content-center" colspan="2"><input type="text" name="aula7" class="form-control inputaulas" style="width: 57px;" required></td>
     </tr>
     <tr>
       <th scope="row" name="numaula8">8</th>  
-      <td class="d-flex justify-content-center"><input type="text" name="aula8" class="form-control inputaulas" style="width: 57px;"></td>
+      <td class="d-flex justify-content-center"><input type="text" name="aula8" class="form-control inputaulas" style="width: 57px;" required></td>
     </tr>
     <tr>
       <th scope="row" name="numaula9">9</th>
-      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula9" class="form-control inputaulas" style="width: 57px;"></td>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula9" class="form-control inputaulas" style="width: 57px;" required></td>
     </tr>
     <tr>
       <th scope="row" name="numaula10">10</th>
-      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula10" class="form-control inputaulas" style="width: 57px;"></td>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula10" class="form-control inputaulas" style="width: 57px;" required></td>
     </tr>
     <tr>
       <th scope="row" name="numaula11">11</th>
-      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula11" class="form-control inputaulas" style="width: 57px;"></td>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula11" class="form-control inputaulas" style="width: 57px;" required></td>
     </tr>
     <tr>
       <th scope="row" name="numaula12">12</th>
-      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula12" class="form-control inputaulas" style="width: 57px;"></td>
+      <td colspan="2" class="d-flex justify-content-center"><input type="text" name="aula12" class="form-control inputaulas" style="width: 57px;" required></td>
     </tr>
     <tr>
     <th>
