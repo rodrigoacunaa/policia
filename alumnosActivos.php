@@ -56,13 +56,13 @@ destroyAdmin();
   
  <div class="card">
     <div class="card-body">
-     <table id="table_id" width="100%" cellspacing="0" class="table table-striped table-bordered">
+     <table id="table_id" width="100%" cellspacing="0" class="table table-striped table-bordered display responsive nowrap">
             <thead>
                 <tr>
-                    <th scope="col">Dni </th>
-                    <th scope="col">Nombre Apellido </th>
-                    <th scope="col">Aula</th>
-                    <th scope="col">.</th>
+                    <th>Dni </th>
+                    <th>Nombre Apellido </th>
+                    <th>Aula</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -80,9 +80,9 @@ destroyAdmin();
             
                 echo "<tr>";
             
-                echo "<th scope='row'>$dni</th>"; //1
+                echo "<th>$dni</th>"; //1
             
-                echo '<td >'. $row['nomApe'].'</td>'; //2
+                echo '<td>'. $row['nomApe'].'</td>'; //2
             
                 echo '<td>'. $row['aula'].'</td>'; //12
             
