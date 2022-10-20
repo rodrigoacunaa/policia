@@ -25,7 +25,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <button class="btn btn-primary"onclick="bypass()">Regresar</button>
+                    <a class="btn btn-dark" href="index.php">Regresar</a>
                     <form class="d-flex">
                     </form>
                 </div>
@@ -39,27 +39,21 @@
                     <label for="loginEmail">Correo Electronico</label>
                     <input type="email" name="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="loginPass">Contraseña</label>
                     <input type="password" name="password" class="form-control" id="loginPass" required>
                 </div>
-                <br>
-                <button type="submit" name="submit" class="btn btn-primary" style="cursor: pointer;">Ingresar</button>
-                <a class="btn btn-primary" style="cursor: pointer;" href="http://localhost/policia">Volver al inicio</a>
+                <button type="submit" name="submit" class="btn btn-outline-dark text-center">Ingresar</button>
             </form>
         </div>
         </div>
-        <div style="padding-top: 10%">
-        <footer class="py-5 bg-dark  " id="footer"  >
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
-       </div>
+        <!-- Footer -->
+        <?php
+            include('modulos/footer.php');
+        ?>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
-    <script type="text/javascript">
-        function bypass(){window.location="index.html";};
-    </script>
 </html>
