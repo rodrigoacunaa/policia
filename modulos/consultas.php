@@ -18,9 +18,9 @@ $tipo = $_POST['tipo'];
             $secundario = $_POST['secundario'];
             $paisNacimiento = $_POST['paisNacimiento'];
             $aula = $_POST['aula'];
-            $arma = $_POST['arma'];
+            
 
-            $sql = "INSERT INTO `alumnos`(`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distrito`, `domicilio`, `destino`, `comisariaD`, `secundario`, `paisNacimiento`, `aula`, `armaAsig`) VALUES ('".$dni."','".$nomApe."','".$email."','".$telefono."','".$cod_post."','".$distrito."','".$domicilio."','".$destino."','".$com_destino."','".$secundario."','".$paisNacimiento."','".$aula."','".$arma."')";
+            $sql = "INSERT INTO `alumnos`(`dni`, `nomApe`, `email`, `telefono`, `cdPostal`, `distrito`, `domicilio`, `destino`, `comisariaD`, `secundario`, `paisNacimiento`, `aula`) VALUES ('".$dni."','".$nomApe."','".$email."','".$telefono."','".$cod_post."','".$distrito."','".$domicilio."','".$destino."','".$com_destino."','".$secundario."','".$paisNacimiento."','".$aula."')";
 
                 $sqlEX = mysqli_query($connection, $sql);
                 
@@ -75,7 +75,39 @@ $tipo = $_POST['tipo'];
             }
             break;
 
-        case 'formador':
+        case 'buscarAlumno':
+            $dni = $_POST['dni'];
+            
+            $sql = "SELECT * FROM `alumnos` WHERE `dni` = $dni ";
+            $sqlEX = mysqli_query($connection, $sql);
+            $row = mysqli_fetch_array($sqlEX);
+            $telefono = $row["telefono"];
+            $cdPostal = $row["cdPostal"];
+            $distrito = $row["distrito"];
+            $domicilio = $row["domicilio"];
+            $destino = $row["destino"];
+            $comisariaD = $row["comisariaD"];
+            $secundario = $row["secundario"];
+            $paisNacimiento = $row["paisNacimiento"];
+            $armaAsig = $row["armaAsig"];
+
+                        $data = array(
+                'telefono' => $telefono,
+                'cdPostal' => $cdPostal,
+                'distrito' => $distrito,
+                'domicilio' => $domicilio,
+                'destino' => $destino,
+                'comisariaD' => $comisariaD,
+                'secundario' => $secundario,
+                'paisNacimiento' => $paisNacimiento,
+                'armaAsig' => $armaAsig                   
+            );
+
+            $json = json_encode($data);
+
+            echo $json;
+
+
             
             break;
         

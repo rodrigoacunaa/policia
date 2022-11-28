@@ -32,7 +32,7 @@ destroyAdmin();
                         </li>
                     </ul>
          <div>
-            <button class="btn btn-primary" name="logout" type="submit" onclick="bypass();">Regresar</button>
+            <button class="btn btn-primary" name="logout" type="button" onclick="bypass();">Regresar</button>
            </div>
              <!--!logout -->
                     </form>
@@ -343,10 +343,10 @@ destroyAdmin();
                         <label for="validationCustom03">Aula</label>
                         <input type="number" class="form-control" id="aula" name="dni" required>
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <!-- <div class="col-md-6 mb-3">
                         <label for="validationCustom03">Arma asignada</label>
                         <input type="text" class="form-control" id="arma" name="dni" required>
-                    </div>
+                    </div> -->
                 <br>
                 <button class="btn btn-primary" type="submit" id="submitA" style="cursor: pointer;border-radius:  10px;">Agregar</button>
                 <div style="padding-left:20px">
@@ -384,7 +384,6 @@ destroyAdmin();
                     secundario: $("#secundario").val(),
                     paisNacimiento: $("#paisNacimiento").val(),
                     aula: $("#aula").val(),
-                    arma: $("#arma").val(),
                     tipo: "cargarAlumno"
                     };
                     //validacion ternaria de redireccion segun valor de la variable booleana "edit"
@@ -412,6 +411,7 @@ destroyAdmin();
                     });
                 });
         });
+        function bypass(){window.location="admin.php";};
         </script>
 
 </body>

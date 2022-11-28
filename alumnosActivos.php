@@ -14,7 +14,6 @@ destroyAdmin();
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 
@@ -53,7 +52,7 @@ destroyAdmin();
     <div class="p-5 text-center bg-light">
     <h1 class="mb-3">Totalidad de alumnos de la academia (activos)</h1>
   </div>
-  
+
  <div class="card">
     <div class="card-body">
      <table id="table_id" width="100%" cellspacing="0" class="table table-striped table-bordered">
@@ -77,6 +76,7 @@ destroyAdmin();
             
                 foreach($query as $row){
                 $dni=$row['dni'];
+                $id = $row['id'];
             
                 echo "<tr>";
             
@@ -86,7 +86,7 @@ destroyAdmin();
             
                 echo '<td>'. $row['aula'].'</td>'; //12
             
-                echo "<td> <a data-bs-toggle='modal' data-bs-target='#editar'><img src='assets/imagenes/lapiz.png' alt='editar'/></td></a>"; //16
+                echo "<td> <button data-dni=".$dni." id='verMas'> 🕵️ </button> </td>"; //16
             
                 echo '</tr>';
                 }
@@ -110,6 +110,8 @@ destroyAdmin();
                 });
             });
         </script>
+
+        <script type="text/javascript" src="js/script.js"></script>
 
 
   </body>

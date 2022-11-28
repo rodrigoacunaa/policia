@@ -62,14 +62,14 @@ destroyAdmin();
                                 <label for="inputPassword2" class="visually-hidden">Password</label>
                                 <input type="password" class="form-control" id="password" placeholder="Password">
                             </div>
-                            <div class="col-auto">
+                            <!-- <div class="col-auto">
                                 <label for="inputPassword2" class="visually-hidden"></label>
                                 <select class="form-select" id="form-select" aria-label="Default select example" value="Motivo" placeholder="Motivo" select>
                                     <option value="" >Motivo de la Baja</option>
                                     <option value="">..</option>
                                     <option value="">..</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="col-auto">
                                 <input class="form-control" type="date" id="fechaBaja">
                             </div>
