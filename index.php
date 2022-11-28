@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title></title>
-                <!-- Bootstrap core JS-->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-                <!-- Core theme JS-->
-                <script src="js/scripts.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>Escuela de Policia</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/imagenes/alto somos la polisia2.jpg" />
+        <link rel="icon" type="image/x-icon" href="assets/imagenes/alto somos la polisia2.jpg">
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
         <div id="div1">
@@ -37,10 +32,7 @@
                             </ul>
                         </li>
                     </ul>
-                    
-                        <button class="btn btn-primary" onclick="animacion();">Ingresar</button>
-                        
-                    
+                        <a class="btn btn-dark" href="login.php">Ingresar</a>
                 </div>
             </div>
         </nav>  
@@ -57,7 +49,7 @@
         <div class="container" id="inicioDiv">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2 text-center">
-                    <div class="p-5"><img class="img-fluid rounded-circle round-width" src="..\policia\assets\imagenes\policia2.jpeg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-3" src="..\policia\assets\imagenes\policia2.jpeg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -75,7 +67,7 @@
         <div class="container">
             <div class="row align-items-center text-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle round-width" src="..\policia\assets\imagenes\polisia4.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-3" src="..\policia\assets\imagenes\polisia4.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
@@ -83,7 +75,7 @@
                         <p class="text-justify">
                             Inicio de la secretaria academica 
                         </p>
-                        <a href="login.php" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Ir</a>
+                        <a href="login.php" class="btn btn-primary btn-lg px-4 py-3">Ir</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +85,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2 text-center">
-                    <div class="p-5"><img class="img-fluid rounded-circle round-width" src="..\policia\assets\imagenes\polisia3.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-3" src="..\policia\assets\imagenes\polisia3.jpg" alt="..." /></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -108,12 +100,13 @@
         </div>
     </section>
         <!-- Footer-->
-        <footer class="py-5 bg-dark ">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
+        <?php
+            include('modulos/footer.php')
+        ?>
     </div>
     </body>
-    <script type="text/javascript">
-        function animacion() {window.location="login.php";};
-    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </html>
